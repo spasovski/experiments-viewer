@@ -5,6 +5,7 @@ import ChartContainer from '../containers/chart-container';
 import DescriptionContainer from '../containers/description-container';
 import ConfigurationContainer from '../containers/configuration-container';
 import Legend from '../views/legend';
+import DatasetControlContainer from '../containers/dataset-control-container';
 
 
 export default function(props) {
@@ -64,20 +65,23 @@ export default function(props) {
 
   return (
     <article id="chart-list">
-      <ConfigurationContainer
-        configureOutliers={true}
-        configurePopulations={true}
-        configureCharts={true}
+      <section className="chart-config">
+        <DatasetControlContainer />
+        <ConfigurationContainer
+          configureOutliers={true}
+          configurePopulations={true}
+          configureCharts={true}
 
-        showOutliers={props.showOutliers}
-        scale={props.scale}
+          showOutliers={props.showOutliers}
+          scale={props.scale}
 
-        whitelistedMetricIds={props.whitelistedMetricIds}
-        whitelistedPopulations={props.whitelistedPopulations}
-        intentionallySelectedNoMetrics={props.intentionallySelectedNoMetrics}
+          whitelistedMetricIds={props.whitelistedMetricIds}
+          whitelistedPopulations={props.whitelistedPopulations}
+          intentionallySelectedNoMetrics={props.intentionallySelectedNoMetrics}
 
-        location={props.location}
-      />
+          location={props.location}
+        />
+      </section>
       {maybeLegend}
       <section className="charts">
         {chartLinks}

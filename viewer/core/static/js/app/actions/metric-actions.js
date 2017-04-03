@@ -1,5 +1,6 @@
 import * as types from './action-types';
 
+
 export function gettingMetricMetadata() {
   return {
     type: types.GETTING_METRIC_METADATA

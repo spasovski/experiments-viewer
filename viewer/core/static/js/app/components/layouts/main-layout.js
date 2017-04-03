@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import DatasetDatestampContainer from '../containers/dataset-datestamp-container';
 import LogoutButtonContainer from '../containers/logout-button-container';
+import DatasetTitleContainer from '../containers/dataset-title-container';
 
 
 export default function(props) {
@@ -14,7 +14,7 @@ export default function(props) {
             <Link className="primary-header-link" to={`/?pop=${props.whitelistedPopulations}&showOutliers=${props.showOutliers}`}>Firefox <em>Experiments</em> Viewer</Link>
           </h1>
         </div>
-        <DatasetDatestampContainer />
+        <DatasetTitleContainer />
         <LogoutButtonContainer />
       </header>
       <div className="secondary-menu">
